@@ -81,17 +81,18 @@ def main(resume_content, filename):
 
     # Preprocess text
     tokens = preprocess_text(resume_text)
-
+    
     # Analyze skills
     skill_recommendations = analyze_skills(tokens)
-
+    
     # Display skill recommendations
     if skill_recommendations:
-        print("Skills you may consider adding to your resume:")
+        st.write("Skills you may consider adding to your resume:")
         for skill in skill_recommendations:
-            print("- " + skill)
+            st.write("- " + skill)
     else:
-        print("Your resume already includes all predefined skills.")
+        st.write("Your resume already includes all predefined skills.")
+
 
 # Streamlit UI
 def streamlit_ui():
