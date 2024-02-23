@@ -9,7 +9,6 @@ Original file is located at
 
 # Install necessary libraries for Google Colab environment
 
-
 # Import necessary libraries
 import streamlit as st
 import PyPDF4
@@ -23,6 +22,10 @@ import ipywidgets as widgets
 from IPython.display import display
 import traitlets
 from io import BytesIO
+
+nltk.download('punkt')
+nltk.download('stopwords')
+nltk.download('wordnet')
 
 # Function to extract text from PDF
 def extract_text_from_pdf(pdf_bytes):
