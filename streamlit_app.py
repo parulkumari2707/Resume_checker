@@ -67,6 +67,15 @@ def analyze_skills(tokens):
 
     return skill_recommendations
 
+# Function to check ATS-friendliness
+def check_ats_friendly(tokens):
+    # Example check: presence of specific keywords
+    ats_friendly_keywords = ['experience', 'skills', 'education', 'summary']
+    for keyword in ats_friendly_keywords:
+        if keyword not in tokens:
+            return False
+    return True
+
 # Main function
 def main(resume_content, filename):
     file_extension = filename.split('.')[-1]
