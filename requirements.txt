@@ -1,5 +1,5 @@
 PyPDF2==1.26.0
-docx2txt==0.9
+docx2txt
 nltk==3.6.3
 ipywidgets==7.6.6
 
