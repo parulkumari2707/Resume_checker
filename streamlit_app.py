@@ -12,8 +12,8 @@ Original file is located at
 
 # Import necessary libraries
 import streamlit as st
-import PyPDF2
-from PyPDF2 import PdfReader
+import PyPDF4
+from PyPDF4 import PdfReader
 import docx2txt
 import nltk
 from nltk.corpus import stopwords
