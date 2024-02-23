@@ -96,18 +96,13 @@ def main(resume_content, filename):
 # Streamlit UI
 def streamlit_ui():
     st.title("Resume Checker")
-
-    # File upload
-    uploaded_file = st.file_uploader("Upload your resume (PDF or DOCX)", type=['pdf', 'docx'])
-
-    # Check if file is uploaded
-    if uploaded_file:
-        resume_content = uploaded_file.read()  # Access content as bytes
-        filename = uploaded_file.name  # Get filename
+    upload = st.file_uploader("Upload your resume", type=['pdf', 'docx'])
+    if upload is not None:
+        resume_content = upload.read()
+        filename = upload.name
         main(resume_content, filename)
 
-if __name__ == "__main__":
-    streamlit_ui()
+streamlit_ui()
 
 #!streamlit run /usr/local/lib/python3.10/dist-packages/colab_kernel_launcher.py
 
