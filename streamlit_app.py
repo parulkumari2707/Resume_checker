@@ -31,7 +31,7 @@ def extract_text_from_pdf(pdf_bytes):
         text = ''
         for page_num in range(len(reader.pages)):
             page = reader.pages[page_num]
-            text += page.extract_text()
+            text += page.extractText()
     return text
 
 # Function to extract text from Word document
