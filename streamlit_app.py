@@ -7,7 +7,7 @@ Original file is located at
     https://colab.research.google.com/drive/1mZ0HegtAuuFqwcFiUBLllqK43Cn4bMYn
 """
 
-''' # Install necessary libraries for Google Colab environment
+# Install necessary libraries for Google Colab environment
 !pip install PyPDF2
 !pip install docx2txt
 !pip install nltk
@@ -17,7 +17,6 @@ Original file is located at
 nltk.download('punkt')
 nltk.download('stopwords')
 nltk.download('wordnet')
-'''
 
 # Import necessary libraries
 import PyPDF2
