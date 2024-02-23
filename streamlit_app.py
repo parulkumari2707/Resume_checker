@@ -117,19 +117,4 @@ def streamlit_ui():
 
 streamlit_ui()
 
-#!streamlit run /usr/local/lib/python3.10/dist-packages/colab_kernel_launcher.py
-
-''' # UI for uploading resume file
-upload = widgets.FileUpload(accept='.pdf,.docx', multiple=False)
-display(upload)
-
-# Event handler for file upload
-def on_upload_change(change):
-    if upload.value:
-        resume_content = next(iter(upload.value.values()))['content']  # Accessing content as bytes
-        filename = next(iter(upload.value.values()))['metadata']['name']  # Get filename
-        main(resume_content, filename)
-
-upload.observe(on_upload_change, names='_counter')
-'''
 
