@@ -13,7 +13,7 @@ Original file is located at
 # Import necessary libraries
 import streamlit as st
 import PyPDF4
-from PyPDF4 import PdfReader
+from PyPDF4.pdf import PdfFileReader
 import docx2txt
 import nltk
 from nltk.corpus import stopwords
@@ -27,7 +27,7 @@ from io import BytesIO
 # Function to extract text from PDF
 def extract_text_from_pdf(pdf_bytes):
     with BytesIO(pdf_bytes) as f:
-        reader = PyPDF2.PdfReader(f)
+        reader = PyPDF4.PdfFileReader(f)
         text = ''
         for page_num in range(len(reader.pages)):
             page = reader.pages[page_num]
