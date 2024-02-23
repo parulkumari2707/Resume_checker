@@ -18,8 +18,6 @@ import nltk
 from nltk.corpus import stopwords
 from collections import Counter
 from string import punctuation
-import ipywidgets as widgets
-from IPython.display import display
 import traitlets
 from io import BytesIO
 
