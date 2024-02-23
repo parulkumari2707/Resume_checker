@@ -11,6 +11,7 @@ Original file is located at
 
 
 # Import necessary libraries
+import streamlit as st
 import PyPDF2
 from PyPDF2 import PdfReader
 import docx2txt
@@ -22,7 +23,6 @@ import ipywidgets as widgets
 from IPython.display import display
 import traitlets
 from io import BytesIO
-import streamlit as st
 
 # Function to extract text from PDF
 def extract_text_from_pdf(pdf_bytes):
