@@ -12,11 +12,12 @@ Original file is located at
 !pip install docx2txt
 !pip install nltk
 !pip install streamlit
-'''
+
 
 nltk.download('punkt')
 nltk.download('stopwords')
 nltk.download('wordnet')
+'''
 
 # Import necessary libraries
 import PyPDF2
