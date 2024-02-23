@@ -85,13 +85,18 @@ def main(resume_content, filename):
     # Analyze skills
     skill_recommendations = analyze_skills(tokens)
     
-    # Display skill recommendations
-    if skill_recommendations:
-        st.write("Skills you may consider adding to your resume:")
-        for skill in skill_recommendations:
-            st.write("- " + skill)
+    # Check ATS-friendliness
+    ats_friendly = check_ats_friendly(tokens)
+    
+    # Display results
+    st.write("Skills you may consider adding to your resume:")
+    for skill in skill_recommendations:
+        st.write("- " + skill)
+    
+    if ats_friendly:
+        st.write("Your resume is ATS-friendly.")
     else:
-        st.write("Your resume already includes all predefined skills.")
+        st.write("Your resume may not be ATS-friendly. Consider adding sections such as 'Experience', 'Skills', 'Education', and 'Summary'.")
 
 
 # Streamlit UI
