@@ -8,10 +8,10 @@ Original file is located at
 """
 
 # Install necessary libraries for Google Colab environment
-!pip install PyPDF2
-!pip install docx2txt
-!pip install nltk
-!pip install streamlit
+pip install PyPDF2
+pip install docx2txt
+pip install nltk
+pip install streamlit
 
 
 nltk.download('punkt')
